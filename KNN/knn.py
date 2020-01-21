@@ -1,6 +1,7 @@
 import numpy as np
 import operator
 
+# function to calculate euclidean distance
 def euc_dist(x1, x2):
     return np.sqrt(np.sum((x1-x2)**2))
 
@@ -37,7 +38,8 @@ class KNearestNeighbors():
                 else:
                     neigh_count[self.Y_train[idx]] = 1
             
+            # get the most common class label 
             sorted_neigh_count = sorted(neigh_count.items(), key=operator.itemgetter(1), reverse=True)
-
+            
             predictions.append(sorted_neigh_count[0][0])
         return predictions
