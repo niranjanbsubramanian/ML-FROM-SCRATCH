@@ -40,7 +40,7 @@ class KMeans():
         #recalculate cluster center points
             old_centroid = centroid
             # loop through the cluster and calculate the mean of all the points in the cluster and
-            # make the means as the new centroid
+            # make the means as the new centroids
             for i in range(self.K):
                 pts_i = np.where(cluster == i)
                 centroid[i] = np.mean(X[pts_i], axis=0)
