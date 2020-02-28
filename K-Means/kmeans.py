@@ -37,7 +37,7 @@ class KMeans():
                 # assign the point to a cluster which has minimum distance
                 cluster[idx] = np.argmin(dist)
 
-        #recalculate cluster center points
+            #recalculate cluster center points
             old_centroid = centroid
             # loop through the cluster and calculate the mean of all the points in the cluster and
             # make the means as the new centroids
